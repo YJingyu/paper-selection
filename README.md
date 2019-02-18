@@ -4,3 +4,6 @@
 
 ### A Style-Based Generator Architecture for Generative Adversarial Networks <br>
 - 人称GAN2.0。通过风格迁移里的AdaIN的概念重新定义了生成器架构，可以自动实现概念层面的解耦，以及生成微小的variance。\[[pdf](https://arxiv.org/abs/1812.04948)\]
+
+### DocFace: Matching ID Document Photo to Selfies
+- 人证核验场景。训练数据为证件照和现场照pair，关注domain的不同。使用sibling网络分别提取不同domain的特征，提出对应的损失函数。\[[pdf](https://arxiv.org/pdf/1805.02283.pdf)]
