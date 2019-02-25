@@ -8,8 +8,6 @@
 ### DocFace: Matching ID Document Photo to Selfies
 - 人证核验场景。训练数据为证件照和现场照pair，关注domain的不同。使用sibling网络分别提取不同domain的特征，提出对应的损失函数。\[[pdf](https://arxiv.org/pdf/1805.02283.pdf)]
 
-## 2019-2-21
-
 ### Spatial Transformer Networks
 - CNN可以显示的学习平移不变性，隐式的学习到对旋转，伸缩、尺度等变换的不变性，Google  DeepMind 2016年提出的STN网络，可以显式地赋予网络对上述变换的不变性。不依赖于关键点进行矫正和对齐，而且网络可以作为模块加入神经网络的各个层中。\[[pdf](https://arxiv.org/abs/1506.02025)]
 
