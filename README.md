@@ -24,3 +24,10 @@
 	2. 基于潜在子空间迁移的方法，投影两个不同模组的数据到共同的潜在子空间，这个子空间可以度量异构数据的相关性。
 	3. 训练域不变性feature，将ID信息与其他的域信息解耦出来，通常做法是在一个比较大规模的VIS数据集上训练，然后在NIR数据集上fine-tune，从而学习domain-invariant features
 
+### Why do deep convolutional networks generalize so poorly to small image transformations?
+- 这篇文章提出，对图像中object进行微小的缩放或者平移，一个CNN图像分类器可能就会从认识object变得不认识object。文章提出，这是因为当代CNN忽略了采样定理(如果按照下采样比例同样的大小像素数移动object，则会有平移不变性)，以及训练数据集的bias。分析的比较到位。 \[[pdf](https://arxiv.org/abs/1805.12177)]
+
+### Self-Attention Generative Adversarial Networks
+- 借助Xiaolong Wang的Non-local文章中的思想，在GAN的生成器和判别器中施加Self-Attention去强制网络关注object的整体结构，而不是受传统CNN的限制，只关注局部特征。\[[pdf](https://arxiv.org/abs/1805.08318)]
+
+
