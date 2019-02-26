@@ -30,4 +30,7 @@
 ### Self-Attention Generative Adversarial Networks
 - 借助Xiaolong Wang的Non-local文章中的思想，在GAN的生成器和判别器中施加Self-Attention去强制网络关注object的整体结构，而不是受传统CNN的限制，只关注局部特征。\[[pdf](https://arxiv.org/abs/1805.08318)]
 
+### SC-FEGAN:Face Editing Generative Adversarial Network with User's Sketch and Color
+- 一个基于GAN的人脸图片编辑系统。对于一张人脸图片，用户擦去一部分并提供对应轮廓草图和颜色信息，该系统生成一定程度符合用户期望的完整图片。生成器使用了U-net结构，结合与用户输入相关的信息提供额外先验，判别器使用了SN-PatchGAN结构对图像patch分别判定，额外的style loss保证生成图像的合理性。文章给出了完整对训练数据的制作方式，能够产生大量的训练样本，使用了一些小的技巧，确保生成器只关注缺失部分的生成。设计比较巧妙，从文章给出的结果来看图像编辑效果卓越。\[[pdf](https://arxiv.org/abs/1902.06838)]
+
 
