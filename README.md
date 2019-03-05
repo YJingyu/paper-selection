@@ -37,20 +37,23 @@
 ### RGB-based 3D Hand Pose Estimation via Privileged Learning with Depth Images
 - 背景：
 
-深度图数据更干净更多，最后的准确率也高很多，而RGB的就要差很远，
+	深度图数据更干净更多，最后的准确率也高很多，而RGB的就要差很远，
 
-但是实际应用的时候，大部分只有RGB的图，所以想到用预训练的深度图训练出来的网络去教RGB网络，这样应该能得到更好的效果。
+	但是实际应用的时候，大部分只有RGB的图，所以想到用预训练的深度图训练出来的网络去教RGB网络，这样应该能得到更好的效果。
 
-这样在测试的时候就不用深度图，只用RGB就行。
+	这样在测试的时候就不用深度图，只用RGB就行。
 
-大体思路：
+	大体思路：
 
-1、在深度图数据训练一个基于深度图的网络，然后在一个另一个有RGB配对的数据集上用深度图finetune
+	1、在深度图数据训练一个基于深度图的网络，然后在一个另一个有RGB配对的数据集上用深度图finetune
 
-2、在配对数据集上用RGB训练一个网络
+	2、在配对数据集上用RGB训练一个网络
 
-3、在配对数据集上用RGB结合深度图，锁定深度数据图，通过Loss_inter来联合训练RGB网络。Loss_inter其实就是特征层的MSE。
+	3、在配对数据集上用RGB结合深度图，锁定深度数据图，通过Loss_inter来联合训练RGB网络。Loss_inter其实就是特征层的MSE。
 
-\[[pdf](https://arxiv.org/abs/1811.07376)]
+	\[[pdf](https://arxiv.org/abs/1811.07376)]
+
+### Multi-Prototype Networks for Unconstrained Set-based Face Recognition
+- 论文解决的是非约束场景的人脸识别问题，和主流基于单张人脸图像识别训练的pipeline不同的是：训练阶段基于集合的，且不做2D或者3D的align，集合里面包含R张（R是个超参数）当前ID的图像，利用稠密子图学习方法（Dense SubGraph learning）encoding不同的光照、年龄、等属性信息，最后通过降维可视化验证了文章提出的dense subgraph learning的方法在属性聚类方面的有效性，并提升了非约束场景人脸识别指定far下的recall。\[[pdf](https://arxiv.org/pdf/1902.04755v3.pdf)]
 
 
