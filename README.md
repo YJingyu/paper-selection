@@ -33,4 +33,24 @@
 ### SC-FEGAN:Face Editing Generative Adversarial Network with User's Sketch and Color
 - 一个基于GAN的人脸图片编辑系统。对于一张人脸图片，用户擦去一部分并提供对应轮廓草图和颜色信息，该系统生成一定程度符合用户期望的完整图片。生成器使用了U-net结构，结合与用户输入相关的信息提供额外先验，判别器使用了SN-PatchGAN结构对图像patch分别判定，额外的style loss保证生成图像的合理性。文章给出了完整对训练数据的制作方式，能够产生大量的训练样本，使用了一些小的技巧，确保生成器只关注缺失部分的生成。设计比较巧妙，从文章给出的结果来看图像编辑效果卓越。\[[pdf](https://arxiv.org/abs/1902.06838)]
 
+## 2019-03-04
+### RGB-based 3D Hand Pose Estimation via Privileged Learning with Depth Images
+- 背景：
+
+深度图数据更干净更多，最后的准确率也高很多，而RGB的就要差很远，
+
+但是实际应用的时候，大部分只有RGB的图，所以想到用预训练的深度图训练出来的网络去教RGB网络，这样应该能得到更好的效果。
+
+这样在测试的时候就不用深度图，只用RGB就行。
+
+大体思路：
+
+1、在深度图数据训练一个基于深度图的网络，然后在一个另一个有RGB配对的数据集上用深度图finetune
+
+2、在配对数据集上用RGB训练一个网络
+
+3、在配对数据集上用RGB结合深度图，锁定深度数据图，通过Loss_inter来联合训练RGB网络。Loss_inter其实就是特征层的MSE。
+
+\[[pdf](https://arxiv.org/abs/1811.07376)]
+
 
