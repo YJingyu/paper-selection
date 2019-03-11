@@ -58,4 +58,4 @@
 
 ## 2019-03-04
 ### Region Proposal by Guided Anchoring
-- 常规的faster rcnn目标检测系统通常需要固定的anchor来生成proposals，这篇文章指出anchor的大小和位置可以让网络自主学习，这样的学习过程通过end2end的方式能提高AR将近10个百分点。具体而言是在RPN的feature顶端加上center prediction和w,h prediction来生成anchor。
+- 常规的faster rcnn目标检测系统通常需要固定的anchor来生成proposals，这篇文章指出anchor的大小和位置可以让网络自主学习，这样的学习过程通过end2end的方式能提高AR将近10个百分点。具体而言是在RPN的feature顶端加上center prediction和w,h prediction来生成anchor。\[[pdf](https://arxiv.org/abs/1901.03278)]
