@@ -56,4 +56,6 @@
 ### Multi-Prototype Networks for Unconstrained Set-based Face Recognition
 - 论文解决的是非约束场景的人脸识别问题，和主流基于单张人脸图像识别训练的pipeline不同的是：训练阶段基于集合的，且不做2D或者3D的align，集合里面包含R张（R是个超参数）当前ID的图像，利用稠密子图学习方法（Dense SubGraph learning）encoding不同的光照、年龄、等属性信息，最后通过降维可视化验证了文章提出的dense subgraph learning的方法在属性聚类方面的有效性，并提升了非约束场景人脸识别指定far下的recall。\[[pdf](https://arxiv.org/pdf/1902.04755v3.pdf)]
 
-
+## 2019-03-04
+### Region Proposal by Guided Anchoring
+- 常规的faster rcnn目标检测系统通常需要固定的anchor来生成proposals，这篇文章指出anchor的大小和位置可以让网络自主学习，这样的学习过程通过end2end的方式能提高AR将近10个百分点。具体而言是在RPN的feature顶端加上center prediction和w,h prediction来生成anchor。
