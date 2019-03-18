@@ -67,9 +67,11 @@ CTA（compress-then-analyze）：监控场景的数据从前端压缩并传递�
 ATC（analyze-then-compress）：直接在前端完成特征提取、压缩和传输，这样前端提取的压缩特征就可以传输到服务器端，由于特征比纹理更紧凑，分析任务的性能在低比特率下非常有前途。\[[pdf](https://arxiv.org/pdf/1903.05921.pdf)]
 
 ### Dynamic Curriculum Learning for Imbalanced Data Classification
--本文针对人的属性分析中训练样本分布不均衡的问题，提出了 Dynamic Curriculum Learning(DCL)，可以自适应的改变每个minibatch中的采样策略和loss反向传播的比例，提升了泛化性能和辨别性。
+- 本文针对人的属性分析中训练样本分布不均衡的问题，提出了 Dynamic Curriculum Learning(DCL)，可以自适应的改变每个minibatch中的采样策略和loss反向传播的比例，提升了泛化性能和辨别性。
 
 DCL主要分为两级课程调度表 two-level curriculum schedulers（不知这么翻译对不对）
-1.sampling scheduler:
+
+1. sampling scheduler:
 管理采样的数据分布，从不平衡的数据分布到均衡，数据分布也由易到难；
-2.loss scheduler 控制分类和度量学习损失的重要性。\[[pdf](https://arxiv.org/abs/1901.06783)]
+
+2. loss scheduler 控制分类和度量学习损失的重要性。\[[pdf](https://arxiv.org/abs/1901.06783)]
