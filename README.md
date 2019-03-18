@@ -59,3 +59,17 @@
 ## 2019-03-11
 ### Region Proposal by Guided Anchoring
 - 常规的faster rcnn目标检测系统通常需要固定的anchor来生成proposals，这篇文章指出anchor的大小和位置可以让网络自主学习，这样的学习过程通过end2end的方式能提高AR将近10个百分点。具体而言是在RPN的feature顶端加上center prediction和w,h prediction来生成anchor。\[[pdf](https://arxiv.org/abs/1901.03278)]
+
+### SCALABLE FACIAL IMAGE COMPRESSION WITH DEEP FEATURE RECONSTRUCTION
+- 本文提出了一种可扩展的图像压缩方案，包括用于特征表示的基础层以及用于纹理表示的增强层，充分的利用了CTA（compress-then-analyze）和ATC（analyze-then-compress）各自的优势。
+注：
+CTA（compress-then-analyze）：监控场景的数据从前端压缩并传递到后端，然后再执行分析任务，目前使用低bit压缩量化，解码出的图像质量较差，因此提出的特征也比较差。
+ATC（analyze-then-compress）：直接在前端完成特征提取、压缩和传输，这样前端提取的压缩特征就可以传输到服务器端，由于特征比纹理更紧凑，分析任务的性能在低比特率下非常有前途。\[[pdf](https://arxiv.org/pdf/1903.05921.pdf)]
+
+### Dynamic Curriculum Learning for Imbalanced Data Classification
+-本文针对人的属性分析中训练样本分布不均衡的问题，提出了 Dynamic Curriculum Learning(DCL)，可以自适应的改变每个minibatch中的采样策略和loss反向传播的比例，提升了泛化性能和辨别性。
+
+DCL主要分为两级课程调度表 two-level curriculum schedulers（不知这么翻译对不对）
+1.sampling scheduler:
+管理采样的数据分布，从不平衡的数据分布到均衡，数据分布也由易到难；
+2.loss scheduler 控制分类和度量学习损失的重要性。\[[pdf](https://arxiv.org/abs/1901.06783)]
